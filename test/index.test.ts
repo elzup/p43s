@@ -7,6 +7,10 @@ describe('isP43s', () => {
     expect(isP43s('p0123456789012345678901234567890123456789012s')).toBe(true)
   })
 
+  it('should return true for PascalCase p43s string', () => {
+    expect(isP43s('Pneumonoultramicroscopicsilicovolcanoconiosis')).toBe(true)
+  })
+
   it('should return false for wrong length', () => {
     expect(isP43s('ps')).toBe(false)
     expect(isP43s('hello')).toBe(false)

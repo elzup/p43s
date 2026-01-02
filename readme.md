@@ -14,6 +14,7 @@ $ npm install p43s
 const { isP43s } = require('p43s')
 
 isP43s('probabilistic_programming_problems') // => true
+isP43s('probabilistic_programming_problemS') // => true
 isP43s('hello') // => false
 ```
 
