@@ -1,10 +1,20 @@
-test "add" {
-  assert_eq!(add(1, 2), 3)
-  assert_eq!(add(-1, 1), 0)
-  assert_eq!(add(0, 0), 0)
+test "isP43s with valid p43s string" {
+  // 45 chars: p + 43 chars + s
+  assert_eq(isP43s("p0123456789012345678901234567890123456789012s"), true)
+}
+test "isP43s with PascalCase valid p43s string" {
+  assert_eq(isP43s("Pneumonoultramicroscopicsilicovolcanoconiosis"), true)
 }
 
-test "greet" {
-  assert_eq!(greet("World"), "Hello, World!")
-  assert_eq!(greet("MoonBit"), "Hello, MoonBit!")
+test "isP43s with wrong length" {
+  assert_eq(isP43s("ps"), false)
+  assert_eq(isP43s("hello"), false)
+}
+
+test "isP43s with wrong start" {
+  assert_eq(isP43s("x0123456789012345678901234567890123456789012s"), false)
+}
+
+test "isP43s with wrong end" {
+  assert_eq(isP43s("p0123456789012345678901234567890123456789012x"), false)
 }

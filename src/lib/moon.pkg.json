@@ -2,8 +2,7 @@
   "link": {
     "js": {
       "exports": [
-        "add",
-        "greet"
+        "isP43s"
       ],
       "format": "esm"
     }

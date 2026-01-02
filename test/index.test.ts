@@ -1,26 +1,22 @@
 import { describe, expect, it } from 'vitest'
-import { add, greet } from '../lib/esm/index.js'
+import { isP43s } from '../lib/esm/index.js'
 
-describe('add', () => {
-  it('should add two positive numbers', () => {
-    expect(add(1, 2)).toBe(3)
+describe('isP43s', () => {
+  it('should return true for valid p43s string (45 chars, starts with p, ends with s)', () => {
+    // 45 chars total: p + 43 middle chars + s
+    expect(isP43s('p0123456789012345678901234567890123456789012s')).toBe(true)
   })
 
-  it('should handle negative numbers', () => {
-    expect(add(-1, 1)).toBe(0)
+  it('should return false for wrong length', () => {
+    expect(isP43s('ps')).toBe(false)
+    expect(isP43s('hello')).toBe(false)
   })
 
-  it('should handle zero', () => {
-    expect(add(0, 0)).toBe(0)
-  })
-})
-
-describe('greet', () => {
-  it('should greet with name', () => {
-    expect(greet('World')).toBe('Hello, World!')
+  it('should return false for wrong start character', () => {
+    expect(isP43s('x0123456789012345678901234567890123456789012s')).toBe(false)
   })
 
-  it('should greet MoonBit', () => {
-    expect(greet('MoonBit')).toBe('Hello, MoonBit!')
+  it('should return false for wrong end character', () => {
+    expect(isP43s('p0123456789012345678901234567890123456789012x')).toBe(false)
   })
 })

@@ -1,26 +1,20 @@
-# TODO
+# p43s
 
-> TODO
+> Check if a string matches the p43s numeronym pattern
 
 ## Install
 
 ```
-$ npm install TODO
+$ npm install p43s
 ```
-
-## Doc
-
-[./src/\_\_test\_\_](./src/__test__)
 
 ## Usage
 
 ```js
-const { hoge } = require('TODO')
+const { isP43s } = require('p43s')
 
-/* tree shaking */
-// const { hoge } = require('elzup/TODO/lib/hoge')
-
-hoge()
+isP43s('probabilistic_programming_problems') // => true
+isP43s('hello') // => false
 ```
 
 ## License

@@ -1,7 +1,7 @@
 {
-  "name": "TODO",
+  "name": "p43s",
   "version": "0.0.0",
-  "description": "TODO",
+  "description": "Check if a string matches the p43s numeronym pattern",
   "author": "elzup",
   "license": "MIT",
   "type": "module",
@@ -15,14 +15,14 @@
       "require": "./lib/cjs/index.js"
     }
   },
-  "repository": "elzup/TODO",
+  "repository": "elzup/p43s",
   "bugs": {
-    "url": "https://github.com/elzup/TODO/issues"
+    "url": "https://github.com/elzup/p43s/issues"
   },
-  "homepage": "https://github.com/elzup/TODO#readme",
+  "homepage": "https://github.com/elzup/p43s#readme",
   "keywords": [
     "moonbit",
-    "utils"
+    "numeronym"
   ],
   "engines": {
     "node": ">=18"
