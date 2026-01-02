@@ -1,14 +1,7 @@
 /**
- * Add two integers
- * @param a - First integer
- * @param b - Second integer
- * @returns Sum of a and b
+ * Check if a string matches the p43s numeronym pattern
+ * (starts with 'p' or 'P', ends with 's' or 'S', and has exactly 43 characters in between)
+ * @param s - String to check
+ * @returns true if the string matches the p43s pattern
  */
-export function add(a: number, b: number): number;
-
-/**
- * Greet with a name
- * @param name - Name to greet
- * @returns Greeting message
- */
-export function greet(name: string): string;
+export function isP43s(s: string): boolean;
