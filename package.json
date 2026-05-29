@@ -27,7 +27,7 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@9.15.9",
   "scripts": {
     "clean": "rimraf lib target",
     "build": "node scripts/build.js",
